@@ -71,3 +71,7 @@ All layers that came before are "frozen".
 Thus, we only train a small number of parameters as opposed to training the entire network.
 We also get the added advantage of using a complex pre-trained network increasing our accuracy.
 
+
+# D. Putting it all together
+
+
