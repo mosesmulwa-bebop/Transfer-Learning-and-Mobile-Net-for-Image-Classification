@@ -11,3 +11,11 @@ The key aspect of MobileNet is that it uses Depthwise-Seperable Convolutions as 
 
 Normal Convolutions can be thought of as volumetric where you multiply volumes to volumes.
 ![Normal Convolution](Normal_Convolution.PNG)
+
+<br>
+Depthwise-Seperable Convolutions are broken into Depthwise and then seperable convolutions
+
+### Depthwise
+This involves convolutions per single channel e.g depth.
+Here, e.g channel has it's own filter. Red convolved with red filter and so on..
+![Depthwise Convolution](Depthwise.PNG)
