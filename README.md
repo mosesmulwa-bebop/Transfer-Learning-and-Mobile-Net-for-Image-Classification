@@ -1,6 +1,6 @@
 # Using Transfer Learning and MobileNet to build an Alpaca Classifier
 
-## Explaining MobileNet
+## A. Explaining MobileNet
 
 MobileNet is a convolutional neural network(CNN) architecture designed for low compute environments
 e.g mobile phones or embedded systems.
@@ -40,7 +40,7 @@ it to other popular networks such as the inception network from GoogleNet and VG
 Notice how it has relatively the same accuracy while having significantly less computational cost for training.
 
 
-# Introducing MobileNet v2
+# B. Introducing MobileNet v2
 
 MobileNetV2 is a convolutional neural network architecture that seeks to perform well on mobile devices. It is based on an inverted residual structure where the residual connections are between the bottleneck layers.
 Paper: https://arxiv.org/abs/1801.04381v4
@@ -60,4 +60,14 @@ This has the effect of increasing the number of channels.
 ## Why the bottleneck block works
 Input to the block is expanded before the Convolution allowing network to learn a richer function. It is 
 then projected down after convolution thereby reducing the memory needed to store the values. 
-Thus it basically learns richer functions while only storing a small amount of values.
+Thus it basically learns richer functions while only storing a small amount of values which are passed from layer to layer.
+
+
+# C. Transfer Learning
+Transfer learning allows us to use pre-trained networks and apply them to other use cases.
+It basically involves replacing the final layers of the networks with our intended outputs. We then only train 
+the new added layers.
+All layers that came before are "frozen". 
+Thus, we only train a small number of parameters as opposed to training the entire network.
+We also get the added advantage of using a complex pre-trained network increasing our accuracy.
+
