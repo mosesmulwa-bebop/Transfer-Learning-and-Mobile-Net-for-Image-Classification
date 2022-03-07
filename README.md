@@ -54,3 +54,10 @@ Paper: https://arxiv.org/abs/1801.04381v4
 It is similar to v1 except it uses skip connections too. It also adds an expansion layer before the depthwise
 convolution.
 The block is also called the <b>Bottleneck Block</b>
+Expansion layer is comprised of a number of 1x1 filters whose number is greater than the channel size of the input.
+This has the effect of increasing the number of channels.
+
+## Why the bottleneck block works
+Input to the block is expanded before the Convolution allowing network to learn a richer function. It is 
+then projected down after convolution thereby reducing the memory needed to store the values. 
+Thus it basically learns richer functions while only storing a small amount of values.
