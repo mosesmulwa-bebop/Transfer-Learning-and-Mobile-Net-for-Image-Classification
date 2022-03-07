@@ -47,7 +47,9 @@ Paper: https://arxiv.org/abs/1801.04381v4
 
 ## A single block
 <br>
+
 ![MobileNet v2](images/MobileNetv2.PNG)
+
 <br>
 It is similar to v1 except it uses skip connections too. It also adds an expansion layer before the depthwise
 convolution.
