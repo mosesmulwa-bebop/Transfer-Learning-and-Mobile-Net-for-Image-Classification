@@ -28,10 +28,27 @@ is equal to desired number of channels in the final output.
 ## Why MobileNet works
 
 The number of multiplications(computational cost) needed to achieve the same output as normal convolutions is significantly less when using Depthwise-Seperable convolutions.
-This makes it very useful in system which don't have a lot of computaional power.
+This makes it very useful in systems which don't have a lot of computaional power.
 
 ## What about Accuracy
 
 MobileNet does not sacrifice accuracy inorder to achieve low computational cost. Below is a table comparing
-it to other popular networks such as the inception network from GoogleNet and VGG-16
+it to other popular networks such as the inception network from GoogleNet and VGG-16.
+<br>
 ![Comparison](images/MobileNet_Comparison.PNG)
+<br>
+Notice how it has relatively the same accuracy while having significantly less computational cost for training.
+
+
+# Introducing MobileNet v2
+
+MobileNetV2 is a convolutional neural network architecture that seeks to perform well on mobile devices. It is based on an inverted residual structure where the residual connections are between the bottleneck layers.
+Paper: https://arxiv.org/abs/1801.04381v4
+
+## A single block
+<br>
+![MobileNet v2](images/MobileNetv2.PNG)
+<br>
+It is similar to v1 except it uses skip connections too. It also adds an expansion layer before the depthwise
+convolution.
+The block is also called the <b>Bottleneck Block</b>
