@@ -19,3 +19,19 @@ Depthwise-Seperable Convolutions are broken into Depthwise and then seperable co
 This involves convolutions per single channel e.g depth.
 Here, e.g channel has it's own filter. Red convolved with red filter and so on..
 ![Depthwise Convolution](images/Depthwise.PNG)
+
+### Seperable(Pointwise)
+The output of the depthwise part is then convolved with a number of 1x1 filters. The number of filters 
+is equal to desired number of channels in the final output.
+![Seperable Convolution](images/Pointwise_Convolution.PNG)
+
+## Why MobileNet works
+
+The number of multiplications(computational cost) needed to achieve the same output as normal convolutions is significantly less when using Depthwise-Seperable convolutions.
+This makes it very useful in system which don't have a lot of computaional power.
+
+## What about Accuracy
+
+MobileNet does not sacrifice accuracy inorder to achieve low computational cost. Below is a table comparing
+it to other popular networks such as the inception network from GoogleNet and VGG-16
+![Comparison](images/MobileNet_Comparison.PNG)
