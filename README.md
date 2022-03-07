@@ -10,7 +10,7 @@ The MobileNet paper: <b>MobileNets: Efficient Convolutional Neural Networks for 
 The key aspect of MobileNet is that it uses Depthwise-Seperable Convolutions as opposed to Normal Convolutions.
 
 Normal Convolutions can be thought of as volumetric where you multiply volumes to volumes.
-![Normal Convolution](Normal_Convolution.PNG)
+![Normal Convolution](images/Normal_Convolution.PNG)
 
 <br>
 Depthwise-Seperable Convolutions are broken into Depthwise and then seperable convolutions
@@ -18,4 +18,4 @@ Depthwise-Seperable Convolutions are broken into Depthwise and then seperable co
 ### Depthwise
 This involves convolutions per single channel e.g depth.
 Here, e.g channel has it's own filter. Red convolved with red filter and so on..
-![Depthwise Convolution](Depthwise.PNG)
+![Depthwise Convolution](images/Depthwise.PNG)
